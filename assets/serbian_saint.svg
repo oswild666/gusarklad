@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+    <defs>
+        <style>
+            .icon-fill { fill: #e0cda7; }
+            .icon-stroke { stroke: #e0cda7; stroke-width: 2px; fill: none; }
+        </style>
+    </defs>
+    <title>Serbian Saint Icon</title>
+    <!-- Halo -->
+    <circle cx="24" cy="14" r="8" class="icon-stroke"/>
+    <!-- Head -->
+    <circle cx="24" cy="14" r="3" class="icon-fill"/>
+    <!-- Body (trapezoid shape) -->
+    <path d="M 16 24 L 20 40 L 28 40 L 32 24 Z" class="icon-fill"/>
+</svg>
