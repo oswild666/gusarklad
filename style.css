@@ -109,3 +109,83 @@ button:hover {
 button:active {
     transform: scale(0.95) rotate(2deg);
 }
+
+/* --- Sequencer Grid Styles --- */
+
+* {
+    box-sizing: border-box;
+}
+
+#sequencer-grid {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.track {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2px;
+    height: 20px;
+}
+
+.track-name {
+    flex-shrink: 0; /* Prevent name from shrinking */
+    width: 100px;
+    height: 100%;
+    line-height: 20px;
+    font-size: 0.8em;
+    padding-right: 10px;
+    text-align: right;
+    color: #888;
+    text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.step-grid {
+    display: grid;
+    grid-template-columns: repeat(64, 1fr);
+    gap: 2px;
+    flex: 1; /* Use flex-grow to take up remaining space */
+    height: 100%;
+}
+
+.step-cell {
+    background-color: #333;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.1s;
+    border-radius: 2px;
+}
+
+.step-cell:hover {
+    background-color: #555;
+}
+
+.step-cell[data-state="x"],
+.step-cell[data-state="o"] {
+    background-color: #eee;
+}
+
+.step-cell[data-state="x"]::before,
+.step-cell[data-state="o"]::before {
+    color: #111;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.step-cell[data-state="x"]::before {
+    content: 'X';
+}
+
+.step-cell[data-state="o"]::before {
+    content: 'O';
+}
