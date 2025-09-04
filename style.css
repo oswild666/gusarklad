@@ -50,7 +50,7 @@ input[type="number"] {
     border: 2px solid #444;
     color: #eee;
     padding: 8px;
-    width: 60px;
+    width: 75px;
     font-size: 1.2em;
     text-align: center;
     border-radius: 30% 70% 50% 50% / 50% 30% 50% 50%;
@@ -188,4 +188,22 @@ button:active {
 
 .step-cell[data-state="o"]::before {
     content: 'O';
+}
+
+#bpm-group {
+    position: relative;
+    left: -10px;
+}
+
+/* --- Rhythmic Highlighting --- */
+.step-cell:nth-child(4n + 1) {
+    background-color: #404040;
+}
+
+.step-cell:nth-child(8n + 1) {
+    background-color: #4a4a4a;
+}
+
+.step-cell:nth-child(16n + 1) {
+    background-color: #555;
 }
