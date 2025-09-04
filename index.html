@@ -3,44 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Эзотерический секвенсор</title>
+    <title>Органический Секвенсор</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="controls-container">
-        <h1>Эзотерический перкуссионный секвенсор</h1>
-        <div class="controls">
-            <label for="bpm">BPM:</label>
-            <input type="number" id="bpm" value="120" min="20" max="300">
-            <button id="play-btn">PLAY</button>
-            <button id="stop-btn">STOP</button>
-            <button id="restart-btn">RESTART</button>
-        </div>
-    </header>
-
-    <main>
-        <div id="patterns-container">
-            <!-- Паттерны будут добавляться сюда динамически -->
-        </div>
-
-        <div id="interactive-area">
-            <div id="serbian-saints" class="saints-list">
-                <h2>Сербские святые</h2>
-                <!-- Иконки сербских святых -->
+    <div class="container">
+        <div class="controls-panel">
+            <div class="control-group">
+                <label for="bpm">BPM</label>
+                <input type="number" id="bpm" value="120">
             </div>
-            <div id="altar-container">
-                <h2>Алтарь</h2>
-                <div id="altar">
-                    <!-- 3x3 сетка для иконок -->
-                </div>
+            <div class="control-group file-controls">
+                <button id="save-btn">Сохранить</button>
+                <button id="load-btn">Загрузить</button>
             </div>
-            <div id="russian-saints" class="saints-list">
-                <h2>Русские святые</h2>
-                <!-- Иконки русских святых -->
+            <div class="control-group transport-controls">
+                <button id="play-btn">PLAY</button>
+                <button id="stop-btn">STOP</button>
+                <button id="restart-btn">RESTART</button>
             </div>
         </div>
-    </main>
-
-    <script src="script.js"></script>
+    </div>
 </body>
 </html>
