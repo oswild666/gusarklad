@@ -1,17 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
     const sequencerGrid = document.getElementById('sequencer-grid');
-    const numTracks = 6;
     const numSteps = 64;
 
-    for (let i = 0; i < numTracks; i++) {
+    function createTrack(trackIndex, trackName, customClass = '') {
         const track = document.createElement('div');
         track.className = 'track';
+        if (customClass) {
+            track.classList.add(customClass);
+        }
 
         // Create track name
-        const trackName = document.createElement('div');
-        trackName.className = 'track-name';
-        trackName.textContent = `Sound ${i + 1}`;
-        track.appendChild(trackName);
+        const nameEl = document.createElement('div');
+        nameEl.className = 'track-name';
+        nameEl.textContent = trackName;
+        track.appendChild(nameEl);
 
         // Create step grid for the track
         const stepGrid = document.createElement('div');
@@ -21,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const cell = document.createElement('div');
             cell.className = 'step-cell';
             cell.dataset.step = j;
-            cell.dataset.track = i;
+            cell.dataset.track = trackIndex;
             cell.dataset.state = 'off'; // Initial state
 
             // Add click listener to cycle state
@@ -42,5 +44,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         track.appendChild(stepGrid);
         sequencerGrid.appendChild(track);
+    }
+
+    // Create 6 rhythm tracks
+    for (let i = 0; i < 6; i++) {
+        createTrack(i, `Sound ${i + 1}`);
+    }
+
+    // Create 3 melody tracks
+    for (let i = 0; i < 3; i++) {
+        createTrack(i + 6, `MELODY ${i + 1}`, 'melody-track');
     }
 });

@@ -207,3 +207,12 @@ button:active {
 .step-cell:nth-child(16n + 1) {
     background-color: #555;
 }
+
+/* --- Melody Track Styles --- */
+.melody-track {
+    height: 30px;
+}
+
+.melody-track .track-name {
+    line-height: 30px; /* Adjust line-height to match new track height */
+}
