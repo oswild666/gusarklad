@@ -4,15 +4,12 @@ body {
     background-color: #111;
     color: #eee;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
     margin: 0;
+    padding: 20px;
 }
 
 .container {
-    padding: 40px;
+    padding: 30px;
 }
 
 .controls-panel {
@@ -20,11 +17,11 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 20px;
     background-color: #222;
-    padding: 50px;
+    padding: 35px;
     border-radius: 47% 53% 48% 52% / 42% 45% 55% 58%;
-    border: 2px solid #333;
+    border: 1px solid #333;
     box-shadow: 0 0 15px rgba(0,0,0,0.5);
 }
 
@@ -32,7 +29,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
 }
 
 .control-group.file-controls,
@@ -41,7 +38,7 @@ body {
 }
 
 label {
-    font-size: 1.2em;
+    font-size: 1em;
     font-weight: bold;
     color: #ccc;
     text-transform: uppercase;
@@ -52,9 +49,9 @@ input[type="number"] {
     background-color: #1a1a1a;
     border: 2px solid #444;
     color: #eee;
-    padding: 10px;
-    width: 80px;
-    font-size: 1.5em;
+    padding: 8px;
+    width: 60px;
+    font-size: 1.2em;
     text-align: center;
     border-radius: 30% 70% 50% 50% / 50% 30% 50% 50%;
     transition: all 0.3s ease;
@@ -70,8 +67,8 @@ button {
     background-color: #333;
     color: #ccc;
     border: 2px solid #555;
-    padding: 15px 25px;
-    font-size: 1em;
+    padding: 12px 20px;
+    font-size: 0.9em;
     font-weight: bold;
     text-transform: uppercase;
     cursor: pointer;
